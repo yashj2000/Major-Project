@@ -16,7 +16,12 @@ The book recommendations system has been integrated into a web application using
 
 Screenshots of the website will be added here:
 
-[insert screenshots here]
+![3](https://github.com/yashj2000/Major-Project/assets/54151714/c3e35ea8-35c5-4474-832f-03eaa82ff6bb)
+![4](https://github.com/yashj2000/Major-Project/assets/54151714/72cbba12-6363-4079-89a4-b2b523637c8a)
+![5](https://github.com/yashj2000/Major-Project/assets/54151714/924a7a3c-7461-4a1d-85fd-0c82d1ef10b4)
+![1](https://github.com/yashj2000/Major-Project/assets/54151714/a6a6dc68-15f9-4248-81ed-61f384f82a48)
+![2](https://github.com/yashj2000/Major-Project/assets/54151714/39eaeb03-48c0-476b-b9f0-0d3fa37d9787)
+
 
 ## Getting Started
 
