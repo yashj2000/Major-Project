@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+
+.text-white{
+    color:white
+}
+body{
+    background-image : url("https://wallpaperaccess.com/full/638000.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.banner{
+    color:#fff;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 30px 0px;
+}
+.title{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Rubik Microbe', cursive;
+}
+.title:hover{
+    color: #fff;
+}
+.menu > li > a{
+    color: #fff;
+}
+.menu > li > a:hover{
+    color: #000;
+}
+.col-md-3{
+    text-align:center;
+}
+.custom-card{
+    background-color:rgba(255,255,255,0.1);
+    border-radius:5px;
+}
+.custom-card:hover{
+    box-shadow:0px 0px 10px 1px white;
+}
+.card-body{
+    padding:10px 20px;
+}
+.card-img-top{
+    max-height:200px;
+    max-width:150px;
+    margin:0 auto;
+    display:block;
+    padding-bottom:10px;
+}
