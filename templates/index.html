@@ -52,6 +52,9 @@ font-family: 'Righteous', cursive;
         color: #000;
 
     }
+    .custom-card {
+        height: 100%;
+    }
 </style>
 <body >
 
@@ -60,41 +63,38 @@ font-family: 'Righteous', cursive;
     <ul class="nav navbar-nav menu">
         <li><a href="/">Home</a></li>
         <li><a href="/recommend">Recommend</a></li>
-<!--        <li><a>Contact</a></li>-->
     </ul>
 </nav>
 
-    <marquee class="banner">“Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.”</marquee>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="text-align: center;">
-    <h1 class="text-white" style="font-size:50px">Top 50 Books</h1>
-</div>
+<marquee class="banner">“Sometimes, you read a book and it fills you with this weird evangelical zeal, and you become convinced that the shattered world will never be put back together unless and until all living humans read the book.”</marquee>
 
-            {% for i in range(book_name|length) %}
-                <div class="col-md-3" style="margin-top:50px">
-                    <div class="card custom-card" style="text-align: center">
-                        <div class="card-body">
-                            <img class="card-img-top" src="{{ image[i] }}">
-                            <h4 class="text-white" style="margin-top:10px">{{ book_name[i] }}</h4>
-                            <h4 class="text-white">{{ author[i] }}</h4>
-                            <h4 class="text-white">Votes - {{ votes[i] }}</h4>
-                            <h4 class="text-white">Rating - {{ rating[i] }}</h4>
-                        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="text-white" style="font-size:50px">Top 50 Books</h1>
+        </div>
+
+        {% for i in range(book_name|length) %}
+            <div class="col-md-3 col-sm-6" style="margin-top: 20px;">
+                <div class="card custom-card" style="text-align: center; height: 100%;">
+                    <div class="card-body">
+                        <img class="card-img-top" src="{{ image[i] }}">
+                        <h4 class="text-white" style="margin-top:10px"><a href="/summary?title={{ book_name[i] }}" target="_blank">{{ book_name[i] }}</a></h4>
+                        <h4 class="text-white">{{ author[i] }}</h4>
+                        <h4 class="text-white">Votes - {{ votes[i] }}</h4>
+                        <h4 class="text-white">Rating - {{ rating[i] }}</h4>
                     </div>
                 </div>
-            {% endfor %}
-
-
-        </div>
+            </div>
+        {% endfor %}
     </div>
+</div>
 
 </body>
 
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;  bottom: 0; width: 100%;">
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px; bottom: 0; width: 100%;">
     <p>© 2023 Book Recommendation System | All rights reserved | Developed by Vanshika, Vivek, Yash, and Yashwant</p>
     <p>Contact us: <a href="mailto:bookrecommendation@gmail.com" style="color: #fff;">bookrecommendation@gmail.com</a></p>
 </footer>
-
 
 </html>

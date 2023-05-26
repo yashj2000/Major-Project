@@ -16,7 +16,7 @@ def index():
                            author=list(popular_df['Book-Author'].values),
                            image=list(popular_df['Image-URL-M'].values),
                            votes=list(popular_df['num_ratings'].values),
-                           rating=[round(r, 2) for r in popular_df['avg_rating'].values]
+                           rating=[round(r, 2) for r in popular_df['avg_ratings'].values]
                            )
 @app.route('/recommend')
 def recommend_ui():
@@ -28,6 +28,7 @@ def recommend():
     #try catch
     index = np.where(pt.index == user_input)[0][0]
     similar_items = sorted(list(enumerate(similarity_scores[index])), key=lambda x: x[1], reverse=True)[1:5]
+
 
     data = []
     for i in similar_items:
@@ -42,6 +43,25 @@ def recommend():
     print(data)
 
     return render_template('recommend.html',data=data)
+
+@app.route('/summary', methods=['GET'])
+def book_summary():
+    # Get the book title from the query parameters
+    book_title = request.args.get('title')
+
+    # Search for the book in the DataFrame
+    book = books.loc[books['Book-Title'] == book_title]
+
+    # Check if the book is found
+    if book.empty:
+        # Handle the case when the book is not found
+        return "Book not found."
+
+    # Fetch the clean_summary for the book
+    summary = book.iloc[0]['clean_summary']
+
+    return render_template('summary.html', book_title=book_title, summary=summary)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
