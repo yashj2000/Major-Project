@@ -5,6 +5,7 @@ import numpy as np
 popular_df = pickle.load(open('popular.pkl','rb'))
 pt = pickle.load(open('pt.pkl','rb'))
 books = pickle.load(open('books.pkl','rb'))
+bookFinal = pickle.load(open('bookFinal.pkl','rb'))
 similarity_scores = pickle.load(open('similarity_scores.pkl','rb'))
 
 app = Flask(__name__)
@@ -12,11 +13,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html',
-                           book_name=list(popular_df['Book-Title'].values),
-                           author=list(popular_df['Book-Author'].values),
-                           image=list(popular_df['Image-URL-M'].values),
-                           votes=list(popular_df['num_ratings'].values),
-                           rating=[round(r, 2) for r in popular_df['avg_ratings'].values]
+                           book_name=list(bookFinal['Book-Title'].values),
+                           author=list(bookFinal['Book-Author'].values),
+                           image=list(bookFinal['Image-URL-M'].values),
+                           votes=list(bookFinal['num_ratings'].values),
+                           rating=[round(r, 2) for r in bookFinal['avg_ratings'].values]
                            )
 @app.route('/recommend')
 def recommend_ui():
@@ -43,6 +44,16 @@ def recommend():
     print(data)
 
     return render_template('recommend.html',data=data)
+
+@app.route('/popular')
+def popular_ui():
+    return render_template('popular.html',
+                           book_name=list(popular_df['Book-Title'].values),
+                           author=list(popular_df['Book-Author'].values),
+                           image=list(popular_df['Image-URL-M'].values),
+                           votes=list(popular_df['num_ratings'].values),
+                           rating=[round(r, 2) for r in popular_df['avg_ratings'].values]
+                           )
 
 @app.route('/summary', methods=['GET'])
 def book_summary():
