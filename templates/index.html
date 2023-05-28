@@ -88,7 +88,8 @@ font-family: 'Righteous', cursive;
             <div class="col-md-3 col-sm-6" style="margin-top: 20px;">
                 <div class="card custom-card" style="text-align: center; height: 100%;">
                     <div class="card-body">
-                        <img class="card-img-top" src="{{ image[i] }}">
+                        <a href="/summary?title={{ book_name[i] }}" target="_blank">
+                            <img class="card-img-top" src="{{ image[i] }}" > </a>
                         <h4 class="text-white" style="margin-top:10px"><a href="/summary?title={{ book_name[i] }}" target="_blank">{{ book_name[i] }}</a></h4>
                         <h4 class="text-white">{{ author[i] }}</h4>
                         <h4 class="text-white">Votes - {{ votes[i] }}</h4>
@@ -106,5 +107,5 @@ font-family: 'Righteous', cursive;
     <p>© 2023 Book Recommendation System | All rights reserved | Developed by Vanshika, Vivek, Yash, and Yashwant</p>
     <p>Contact us: <a href="mailto:bookrecommendation@gmail.com" style="color: #fff;">bookrecommendation@gmail.com</a></p>
 </footer>
-
+<!--footer end-->
 </html>
