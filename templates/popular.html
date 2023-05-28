@@ -3,67 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Recommendation System</title>
-    <!-- Latest compiled and minified CSS -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon1.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=IBM+Plex+Sans:ital@1&family=Righteous&display=swap');
 
-    .text-white{
-        color:white
-    }
-    body{
-        background-image : url("https://wallpaperaccess.com/full/1489190.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        font-family: 'Open Sans', sans-serif;
-    }
-    .banner{
-        color:#fff;
-    }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
-  margin: 30px 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-    .title{
-        color: #fff;
-        font-size: 50px;
-font-family: 'Barlow', sans-serif;
-font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'Righteous', cursive;
-    }
-    .title:hover{
-        color: #fff;
-    }
-    .menu > li > a{
-        color: #fff;
-    }
-    .menu > li > a:hover{
-        color: #000;
-
-    }
-    .custom-card {
-        height: 100%;
-    }
-
-    .card-img-top {
-        display: block;
-        margin: auto;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-</style>
 <body >
 
 <nav class="navbar" style="background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); height: 80px;">

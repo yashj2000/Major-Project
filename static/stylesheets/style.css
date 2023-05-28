@@ -1,0 +1,135 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=IBM+Plex+Sans:ital@1&family=Righteous&display=swap');
+
+    .text-white{
+        color:white
+    }
+    body{
+        background-image : url("https://wallpaperaccess.com/full/1489190.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .banner{
+        color:#fff;
+    }
+.navbar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 30px 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+    .title{
+        color: #fff;
+        font-size: 50px !important;
+font-family: 'Barlow', sans-serif;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Righteous', cursive;
+    }
+    .title:hover{
+        color: #fff;
+    }
+    .menu > li > a{
+        color: #fff;
+    }
+    .menu > li > a:hover{
+        color: #000;
+
+    }
+    .custom-card {
+        height: 100%;
+    }
+
+    .card-img-top {
+        display: block;
+        margin: auto;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    #play,
+    #pause,
+    #stop {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+        margin-top: 10px;
+    }
+
+    #play:hover,
+    #pause:hover,
+    #stop:hover {
+        background-color: #2980b9;
+    }
+
+    #play.played {
+        background-color: #27ae60;
+    }
+
+    #pause.paused {
+        background-color: #f39c12;
+    }
+
+    .summary {
+        margin-top: 30px;
+        text-align: left;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .summary h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+    }
+
+    .summary p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .buyb {
+        margin-top: 5px;
+        font-size: 16 px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book-image {
+        display: block;
+        margin: auto;
+        margin-right: 20px;
+        height: auto;
+        border-radius: 10px;
+        float: left;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
